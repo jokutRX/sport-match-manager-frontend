@@ -1,0 +1,16 @@
+.match-stats-container {
+  padding: 16px;
+}
+
+.matches-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .matches-grid {
+    flex-direction: column;
+    gap: 8px;
+  }
+}

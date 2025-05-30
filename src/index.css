@@ -1,0 +1,265 @@
+/* client/src/index.css */
+:root {
+  --background-color: #f0f2f5;
+  --header-bg: #fff;
+  --header-shadow: rgba(0, 0, 0, 0.1);
+  --header-title-color: #1a1a1a;
+  --container-bg: #fff;
+  --tabs-color: #000000;
+  --text-color: #000000;
+  --text-secondary: #555555;
+  --card-bg: #fafafa;
+  --table-bg: #ffffff;
+  --table-header-bg: #fafafa;
+  --table-hover-bg: #fafafa;
+  --text-color: #000000;
+  --text-secondary: #595959;
+  --card-border: #d9d9d9;
+  --container-bg: #ffffff;
+  --card-bg: #fafafa;
+  --header-bg: #f0f2f5;
+  --tabs-color: #000000;
+  --primary-color: #1890ff;
+}
+
+[data-theme="dark"] {
+  --background-color: #1f1f1f;
+  --header-bg: #2c2c2c;
+  --header-shadow: rgba(0, 0, 0, 0.5);
+  --header-title-color: #ffffff;
+  --container-bg: #2c2c2c;
+  --tabs-color: #ffffff;
+  --text-secondary: #a6a6a6;
+  --card-bg: #2f2f2f;
+  --card-border: #424242;
+  --table-bg: #1e2a44;
+  --table-header-bg: #37474f;
+  --table-hover-bg: #3b4a6b;
+  --text-color: #e0e0e0;
+  --text-secondary: #b0b0b0;
+  --card-border: #4a5a77;
+  --container-bg: #141b2d;
+  --card-bg: #1e2a44;
+  --header-bg: #1e2a44;
+  --tabs-color: #ffffff;
+  --primary-color: #40c4ff;
+}
+.ant-table-thead > tr > th {
+  background: var(--table-header-bg) !important;
+  color: var(--text-color) !important;
+}
+
+/* Фон при наведении на заголовки */
+.ant-table-thead > tr > th:hover {
+  background: var(--table-hover-bg) !important;
+  color: var(--text-color) !important;
+}
+
+/* Активное состояние сортировки для заголовков */
+.ant-table-thead > tr > th.ant-table-column-sort {
+  background: var(--table-header-bg) !important;
+  color: var(--text-color) !important;
+}
+
+/* Состояние сортировщика (стрелки) */
+.ant-table-thead > tr > th .ant-table-column-sorter {
+  color: var(--text-color) !important;
+}
+
+/* Активная сортировка (когда выбрана) */
+.ant-table-thead > tr > th.ant-table-column-has-sorters.ant-table-column-sort {
+  background: var(--table-header-bg) !important;
+  color: var(--text-color) !important;
+}
+
+/* Убедимся, что текст сортировщика виден */
+.ant-table-column-sorter-inner {
+  color: var(--text-color) !important;
+}
+
+/* Перекрываем чёрный фон в тёмной теме для всех состояний сортировки заголовков */
+[data-theme="dark"] .ant-table-thead > tr > th.ant-table-column-has-sorters {
+  background: var(--table-header-bg) !important;
+  color: var(--text-color) !important;
+}
+
+[data-theme="dark"] .ant-table-thead > tr > th.ant-table-column-has-sorters:hover {
+  background: var(--table-hover-bg) !important;
+  color: var(--text-color) !important;
+}
+
+/* Перекрываем чёрный фон в ячейках отсортированного столбца */
+.ant-table-wrapper td.ant-table-column-sort {
+  background: var(--table-bg) !important;
+  color: var(--text-color) !important;
+}
+
+/* Фон строк при наведении */
+.ant-table-tbody > tr:hover > td {
+  background: var(--table-hover-bg) !important;
+}
+
+.ant-form-item-label > label {
+  color: var(--text-color) !important;
+}
+
+/* Цвет заголовка модального окна */
+.ant-modal-header {
+  background: var(--card-bg) !important;
+}
+
+.ant-modal-title {
+  color: var(--text-color) !important;
+}
+
+.ant-input::placeholder,
+.ant-picker-input > input::placeholder {
+  color: var(--text-secondary) !important;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: var(--header-bg);
+  box-shadow: 0 2px 8px var(--header-shadow);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--header-title-color);
+}
+
+.tabs-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 80px;
+  padding: 20px;
+}
+.ant-form-item-label {
+  text-align: center !important; 
+}
+.ant-tabs-tab span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ant-tabs-tab,
+.ant-tabs-tab-active {
+  color: var(--tabs-color) !important;
+}
+
+.matches-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-height: 600px;
+  overflow-y: auto;
+  padding: 10px;
+  background: var(--container-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Таблица */
+.ant-table {
+  background: var(--table-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-table-thead > tr > th {
+  background: var(--table-header-bg);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.ant-table-tbody > tr > td {
+  color: var(--text-color);
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: var(--table-hover-bg);
+}
+
+.table-row-active {
+  background: var(--table-active-bg);
+}
+
+.table-row-active:hover {
+  background: var(--table-hover-bg);
+}
+
+/* Карточки */
+.ant-card {
+  background: var(--card-bg);
+  border-color: var(--card-border);
+  color: var(--text-color);
+}
+
+.ant-card-hoverable:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Теги */
+.ant-tag {
+  background: var(--tag-bg);
+  color: var(--text-color);
+}
+
+/* Календарь */
+.ant-picker-calendar {
+  background: var(--container-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ant-picker-cell-in-view {
+  color: var(--text-color);
+}
+
+.ant-picker-cell:hover:not(.ant-picker-cell-selected) {
+  background: var(--table-hover-bg);
+}

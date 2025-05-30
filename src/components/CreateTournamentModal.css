@@ -1,0 +1,65 @@
+/* Стили для модального окна */
+.create-tournament-modal .ant-modal-content {
+  background-color: #ffffff; /* Светлая тема */
+  color: var(--colorTextBase, #000000);
+  border-radius: 8px;
+}
+
+.create-tournament-modal .ant-modal-header {
+  background-color: var(--colorBgBase, #ffffff); /* Светлая тема */
+  color: var(--colorTextBase, #000000);
+  border-radius: 8px 8px 0 0; /* Скругление только сверху */
+}
+
+/* Стили для заголовка модального окна */
+.create-tournament-modal .ant-modal-title {
+  color: var(--colorTextBase, #000000);
+}
+
+/* Стили для маски */
+.create-tournament-modal .ant-modal-mask {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Стили для формы */
+.create-tournament-form .ant-form-item-label > label {
+  color: var(--colorTextBase, #000000);
+}
+
+.create-tournament-form .ant-input,
+.create-tournament-form .ant-picker,
+.create-tournament-form .ant-select-selector {
+  background-color: var(--colorBgContainer, #ffffff);
+  color: var(--colorTextBase, #000000);
+  border-color: var(--colorBorder, #d9d9d9);
+}
+
+.create-tournament-form .ant-input::placeholder,
+.create-tournament-form .ant-picker-input > input::placeholder,
+.create-tournament-form .ant-select-selection-placeholder {
+  color: var(--colorTextBase, #000000);
+  opacity: 0.5;
+}
+
+.create-tournament-form .ant-input-prefix,
+.create-tournament-form .ant-picker-prefix,
+.create-tournament-form .ant-select-prefix {
+  color: var(--colorTextBase, #000000);
+}
+
+/* Тёмная тема: ant-modal-content и ant-modal-header */
+[data-theme="dark"] .create-tournament-modal .ant-modal-content {
+  background-color: #303030; /* Тёмная тема */
+}
+
+[data-theme="dark"] .create-tournament-modal .ant-modal-header {
+  background-color: #303030; /* Тёмная тема, как в предыдущем запросе */
+}
+
+/* Тёмная тема: стили формы */
+[data-theme="dark"] .create-tournament-form .ant-input,
+[data-theme="dark"] .create-tournament-form .ant-picker,
+[data-theme="dark"] .create-tournament-form .ant-select-selector {
+  background-color: var(--colorBgContainer, #2c2c2c);
+  border-color: var(--colorBorder, #434343);
+}

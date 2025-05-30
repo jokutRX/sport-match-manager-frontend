@@ -1,0 +1,207 @@
+.tournament-list-container {
+  padding: 16px;
+  width: 100%;
+}
+
+.tournament-list {
+  width: 100%;
+}
+
+.tournament-collapse {
+  border-radius: 8px;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--card-border, #d9d9d9);
+}
+
+.tournament-collapse .ant-collapse-item {
+  border-bottom: 1px solid var(--card-border, #d9d9d9);
+}
+
+.tournament-collapse .ant-collapse-header {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-color, #000000);
+  padding: 12px 16px;
+}
+
+.tournament-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-icon,
+.content-icon {
+  font-size: 18px;
+  color: var(--primary-color, #1890ff);
+}
+
+.tournament-content {
+  padding: 16px;
+}
+
+.tournament-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.info-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--card-border, #d9d9d9);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tournament-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.info-label {
+  font-weight: 500;
+  color: var(--text-secondary, #595959);
+}
+
+.info-value {
+  color: var(--text-color, #000000);
+}
+
+.matches-section {
+  margin-top: 16px;
+}
+
+.matches-section h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--text-color, #000000);
+}
+
+.matches-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.match-card {
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--card-border, #d9d9d9);
+  border-radius: 8px;
+  padding: 12px;
+  flex: 1 1 calc(33.33% - 8px);
+  max-width: 300px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.match-card:hover {
+  border-color: var(--primary-color, #1890ff);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.match-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-color, #000000);
+  margin-bottom: 8px;
+}
+
+.team-name {
+  flex: 1;
+  text-align: center;
+}
+
+.vs {
+  flex: 0 0 auto;
+  margin: 0 8px;
+  font-weight: bold;
+  color: var(--text-secondary, #595959);
+}
+
+.match-date {
+  font-size: 12px;
+  color: var(--text-secondary, #595959);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.match-date .ant-tag {
+  font-size: 10px;
+  line-height: 18px;
+  padding: 0 6px;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 16px;
+  color: var(--primary-color, #1890ff);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.edit-icon:hover {
+  color: var(--primary-color-hover, #40a9ff);
+}
+
+.schedule-button {
+  margin-top: 16px;
+  border-radius: 4px;
+}
+
+.no-tournaments-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.no-tournaments {
+  font-size: 16px;
+  color: var(--text-secondary, #595959);
+}
+
+.schedule-modal .ant-modal-content {
+  border-radius: 8px;
+}
+
+.schedule-form .ant-form-item {
+  margin-bottom: 12px;
+}
+
+.match-pair-input {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: var(--card-bg, #ffffff);
+  border: 1px solid var(--card-border, #d9d9d9);
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .match-card {
+    flex: 1 1 calc(50% - 8px);
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .match-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .tournament-info-grid {
+    grid-template-columns: 1fr;
+  }
+}

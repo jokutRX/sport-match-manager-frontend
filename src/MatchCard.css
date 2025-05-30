@@ -1,0 +1,64 @@
+.match-card {
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+  }
+  
+  .match-card.light {
+    background: #fff;
+  }
+  
+  .match-card.dark {
+    background: #1f1f1f;
+    border-color: #434343;
+    color: #fff;
+  }
+  
+  .match-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .match-card .ant-typography {
+    color: var(--text-color, #000);
+  }
+  
+  .match-card.dark .ant-typography {
+    color: #fff;
+  }
+  
+  .match-card .ant-typography[style*="color: var(--text-secondary)"] {
+    color: #888;
+  }
+  
+  .match-card.dark .ant-typography[style*="color: var(--text-secondary)"] {
+    color: #bbb;
+  }
+  
+  .match-card .ant-tag {
+    font-size: 12px !important;
+    padding: 0 8px !important;
+    line-height: 20px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    visibility: visible !important;
+    color: #fff !important;
+    min-width: 60px;
+    text-align: center;
+    justify-content: center;
+  }
+  
+  .match-card .ant-space {
+    width: 100%;
+  }
+  
+  .match-card .ant-space-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Переопределение для устранения конфликтов */
+  .match-card .ant-tag > span,
+  .match-card .ant-tag > div {
+    display: inline !important;
+    visibility: visible !important;
+  }

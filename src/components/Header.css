@@ -1,0 +1,113 @@
+.header {
+  width: 100%;
+  background-color: var(--container-bg, #ffffff);
+  border-bottom: 1px solid var(--card-border, #d9d9d9);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header.dark-theme {
+  background-color: var(--container-bg, #2f2f2f);
+  border-bottom: 1px solid var(--card-border, #434343);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-light {
+  background-color: transparent;
+  border-bottom: none;
+  color: var(--text-color, #000000);
+}
+
+.menu-dark {
+  background-color: transparent;
+  border-bottom: none;
+  color: var(--text-color, #ffffff);
+}
+
+.menu-light .ant-menu,
+.menu-dark .ant-menu {
+  background-color: transparent;
+}
+
+.menu-light .ant-menu-item,
+.menu-light .ant-menu-item-selected {
+  color: var(--text-color, #000000);
+}
+
+.menu-dark .ant-menu-item,
+.menu-dark .ant-menu-item-selected {
+  color: var(--text-color, #ffffff);
+}
+
+.menu-light .ant-menu-item-selected {
+  background-color: var(--table-header-bg, #e6f7ff);
+  color: #1890ff;
+}
+
+.menu-dark .ant-menu-item-selected {
+  background-color: var(--table-header-bg, #434343);
+  color: #40c4ff;
+}
+
+.theme-switch {
+  background-color: var(--table-hover-bg, #f0f0f0);
+}
+
+.theme-switch .ant-switch-inner {
+  font-size: 16px;
+}
+
+.header.dark-theme .theme-switch {
+  background-color: var(--table-hover-bg, #424242);
+}
+
+.header.dark-theme .theme-switch.ant-switch-checked {
+  background-color: #40c4ff;
+}
+
+.theme-switch .anticon {
+  color: var(--text-color, #000000);
+}
+
+.header.dark-theme .theme-switch .anticon {
+  color: var(--text-color, #ffffff);
+}
+
+/* Адаптивность для узких экранов */
+@media (max-width: 768px) {
+  .header-container {
+    padding: 0 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .header-actions {
+    gap: 12px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .menu-light,
+  .menu-dark {
+    width: 100%;
+  }
+}

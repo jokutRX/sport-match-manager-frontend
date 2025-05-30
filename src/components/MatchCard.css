@@ -1,0 +1,70 @@
+.match-card {
+  border-radius: 8px;
+  border: 1px solid var(--card-border, #d9d9d9);
+  background: var(--card-bg, #ffffff);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  flex: 1 1 calc(33.33% - 8px);
+  max-width: 300px;
+  min-height: 120px;
+  margin: 4px;
+}
+
+.match-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary-color, #1890ff);
+}
+
+.match-card .ant-card-body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.match-card .ant-typography {
+  margin: 0;
+}
+
+.match-card .anticon {
+  font-size: 14px;
+  color: var(--text-secondary, #595959);
+}
+
+.match-card .ant-tag {
+  border-radius: 4px;
+  font-size: 10px;
+  line-height: 18px;
+  padding: 0 6px;
+}
+
+.match-card .ant-btn {
+  border-radius: 4px;
+  font-size: 10px;
+  padding: 2px 8px;
+  height: auto;
+}
+
+.match-card .anticon-setting {
+  font-size: 16px;
+  color: var(--primary-color, #1890ff);
+  transition: color 0.3s ease;
+}
+
+.match-card .anticon-setting:hover {
+  color: var(--primary-color-hover, #40a9ff);
+}
+
+@media (max-width: 1024px) {
+  .match-card {
+    flex: 1 1 calc(50% - 8px);
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .match-card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

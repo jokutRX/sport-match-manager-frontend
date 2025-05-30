@@ -1,0 +1,197 @@
+/* Модальное окно */
+.edit-match-modal {
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.edit-match-modal .ant-modal-content {
+  background: var(--card-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 16px;
+}
+
+.edit-match-modal .ant-modal-header {
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--card-border);
+  padding: 12px 16px;
+  text-align: center;
+}
+
+.modal-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.edit-match-modal .ant-modal-body {
+  padding: 16px;
+}
+
+.edit-match-form {
+  width: 100%;
+}
+
+/* Секция формы */
+.form-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 12px;
+  justify-items: center; /* Центрируем элементы сетки по горизонтали */
+}
+
+.form-section.score-section {
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Для одноколоночных секций (например, goalScorers, yellowCardPlayers) */
+.form-section:not(.score-section):not(:has(+ .form-section)) {
+  grid-template-columns: 1fr;
+}
+
+/* Элемент формы */
+.form-section .ant-form-item {
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Растягиваем содержимое по ширине */
+  width: 100%; /* Убедимся, что Form.Item занимает всю ширину колонки */
+  animation: fadeIn 0.3s ease-in; /* Анимация появления */
+}
+
+/* Контейнер для инпутов */
+.form-section .ant-form-item-control {
+  width: 100%;
+}
+
+/* Метки */
+.form-section .ant-form-item-label > label {
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.form-section .ant-form-item-label {
+  padding-bottom: 4px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Инпуты */
+.form-section .ant-input-number,
+.form-section .ant-input,
+.form-section .ant-input-number-affix-wrapper,
+.form-section .ant-input-affix-wrapper {
+  width: 100% !important;
+  box-sizing: border-box; /* Учитываем padding и border в ширине */
+  border-radius: 6px;
+  border: 1px solid var(--card-border);
+  background: var(--input-bg);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-section .ant-input-number:hover,
+.form-section .ant-input:hover,
+.form-section .ant-input-number-affix-wrapper:hover,
+.form-section .ant-input-affix-wrapper:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-section .ant-input-number:focus,
+.form-section .ant-input:focus,
+.form-section .ant-input-number-affix-wrapper:focus,
+.form-section .ant-input-affix-wrapper:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 6px rgba(24, 144, 255, 0.2);
+}
+
+.form-section .ant-input-number-input,
+.form-section .ant-input {
+  color: var(--text-color);
+  background: transparent;
+  padding: 6px 8px;
+  font-size: 13px;
+  text-align: center; /* Центрирование текста в инпутах */
+  box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+.form-section .ant-input-number-handler-wrap {
+  background: var(--input-bg);
+  border-left: 1px solid var(--card-border);
+}
+
+.form-section .ant-input-number-handler-up,
+.form-section .ant-input-number-handler-down {
+  color: var(--text-color);
+}
+
+.form-section .ant-input-number-handler-up:hover,
+.form-section .ant-input-number-handler-down:hover {
+  color: var(--primary-color);
+}
+
+.form-section .ant-input-prefix,
+.form-section .ant-input-number-prefix {
+  color: var(--text-secondary);
+  margin-right: 6px;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.form-section .ant-input-number:hover .ant-input-number-prefix,
+.form-section .ant-input:hover .ant-input-prefix {
+  color: var(--primary-color);
+}
+
+/* Кнопки */
+.edit-match-modal .ant-modal-footer {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--card-border);
+}
+
+.edit-match-modal .ant-btn {
+  border-radius: 6px;
+  padding: 6px 20px;
+  font-weight: 500;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.edit-match-modal .ant-btn-primary {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.edit-match-modal .ant-btn-primary:hover {
+  background: var(--primary-color);
+  filter: brightness(110%);
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CSS-переменные для тем */
+
+

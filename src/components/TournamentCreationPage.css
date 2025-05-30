@@ -1,0 +1,37 @@
+.tournament-creation-page {
+  padding: 24px;
+  background: var(--container-bg);
+  min-height: 100vh;
+}
+
+.tournament-bracket {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bracket-container {
+  overflow-x: auto;
+  padding: 16px;
+}
+
+.custom-seed {
+  background: var(--card-bg);
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team {
+  padding: 4px 8px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.team:nth-child(2) {
+  border-top: 1px solid var(--card-border);
+}
+
+.ant-form-item-label {
+  text-align: center !important;
+}
