@@ -53,11 +53,11 @@ const App: React.FC = () => {
   const fetchInitialData = async () => {
     try {
       setInitialLoading(true);
-      const matchesResponse = await axios.get("http://localhost:8000/matches/", {
+      const matchesResponse = await axios.get("/matches/", {
         headers: { "Content-Type": "application/json" },
       });
       setMatches(matchesResponse.data);
-      const tournamentsResponse = await axios.get("http://localhost:8000/tournaments/", {
+      const tournamentsResponse = await axios.get("/tournaments/", {
         headers: { "Content-Type": "application/json" },
       });
       setTournaments(tournamentsResponse.data);
@@ -78,7 +78,7 @@ const App: React.FC = () => {
 
   const fetchMatchesBackground = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/matches/", {
+      const response = await axios.get("/matches/", {
         headers: { "Content-Type": "application/json" },
       });
       setMatches(response.data);
@@ -146,7 +146,7 @@ const App: React.FC = () => {
       referee: values.referee || null,
     };
     try {
-      const response = await axios.post("http://localhost:8000/matches/", newMatch, {
+      const response = await axios.post("/matches/", newMatch, {
         headers: { "Content-Type": "application/json" },
       });
       setMatches([...matches, response.data]);
@@ -167,7 +167,7 @@ const App: React.FC = () => {
     teams: { name: string }[];
   }) => {
     try {
-      const response = await axios.post("http://localhost:8000/tournaments/", values, {
+      const response = await axios.post("/tournaments/", values, {
         headers: { "Content-Type": "application/json" },
       });
       setTournaments([...tournaments, response.data]);
@@ -237,7 +237,7 @@ const App: React.FC = () => {
     };
     console.log("App: Sending updated match to server", updatedMatch);
     try {
-      const response = await axios.put(`http://localhost:8000/matches/${editingMatch.id}`, updatedMatch, {
+      const response = await axios.put(`/matches/${editingMatch.id}`, updatedMatch, {
         headers: { "Content-Type": "application/json" },
       });
       setMatches(matches.map((m) => (m.id === editingMatch.id ? response.data : m)));
@@ -287,7 +287,7 @@ const App: React.FC = () => {
         referee: editingMatch.referee,
       };
       console.log("App: Sending finished match to server", updatedMatch);
-      const response = await axios.put(`http://localhost:8000/matches/${editingMatch.id}`, updatedMatch, {
+      const response = await axios.put(`/matches/${editingMatch.id}`, updatedMatch, {
         headers: { "Content-Type": "application/json" },
       });
       setMatches(matches.map((m) => (m.id === editingMatch.id ? response.data : m)));
